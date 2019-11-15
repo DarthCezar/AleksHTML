@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tabela projektów</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<style>
+		body {margins: 10px}
+
+		table, th, td {border:1px solid;border-collapse: collapse; padding: 10px; vertical-align:middle;}
+
+		@media screen and (max-resolution: 200dpi) {
+			.mode_smartphone {display: none;}
+		}
+
+		@media screen and (min-resolution: 201dpi) {
+			.mode_monitor {display: none;}
+		}
+
+
+	</style>
+
+	<body>
+		<table>
+		<tr>
+			<th>Nazwa projektu</th>
+			<th>Opis</th> 
+		</tr>
+		<tr>
+			<td><a href="./miasta/home.html">Tabela w HTML</td>
+			<td>Praca domowa z zakresu użycia tabel w HTML</td> 
+		
+		</tr>
+		<tr>
+			<td><a href="./resolutions/home.html">Rozpoznawanie dpi</td>
+			<td>Strona testująca dpi ekranu urządzenia</td> 
+		
+		</tr>
+		</table>
+	</body>
+
+</html>

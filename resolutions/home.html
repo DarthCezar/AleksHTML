@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Testowanie dpi</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<style>
+	
+		body {margins: 10px}
+
+		table, th, td {border:1px solid;border-collapse: collapse; padding: 10px; vertical-align:middle;}
+
+		/* warunek gaszący napis, max-coś_tam równoważny jest znakowi <= coś_tam*/ 
+		@media screen and (max-resolution: 192dpi) {
+			.instrukcja_do_zgaszenia {display: none;}
+		}
+
+		@media screen and (max-resolution: 180dpi) {
+			.monitor {background-color: orange;}
+		}
+
+		@media screen and (min-resolution: 181dpi) {
+			.smartfonHighRes {background-color: orange;}
+		}
+
+
+	</style>
+
+	<body>
+
+		<p>Wersja 0.01</p>
+
+		<table>
+		<tr>
+			<th>dpi</th>
+			<th style="width:400px">urządzenie</th> 
+			
+		</tr>
+		<tr class="monitor">
+			<td>0-180</td>
+			<td>Monitor komputera, np. 1920x1200 24cale (101dpi)</td> 
+		
+		</tr>
+		<tr class="smartfonHighRes">
+			<td>181-infinity</td>
+			<td>Smartfon wysokiej rozdzielczości, sprawdzone: 1080x2160 (192dpi), 1440x2560 (201dpi)</td> 
+			
+		</tr>
+		</table>
+
+
+		<p>Procedura testowa oparta na:</p>
+
+		<p style="font-family:Monospace; font-size:0.9em">@media screen and (max-resolution: Xdpi)<br>{jeśli dpi urządzenia jest mniejsze niż X, to wykona się instrukcja z tych nawiasów}</p>
+
+		<p class="instrukcja_do_zgaszenia">Aktualna instrukcja nie wykonała się. W przypadku wykonania ten napis zniknie.</p>
+	</body>
+
+</html>

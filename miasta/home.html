@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tabela miast</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<style>
+	
+		body {margins: 10px}
+
+		table, th, td {border:1px solid;border-collapse: collapse; padding: 10px; vertical-align:middle;}
+
+		@media screen and (max-resolution: 180dpi) {
+			.mode_smartphone {display: none;}
+		}
+
+		@media screen and (min-resolution: 181dpi) {
+			.mode_monitor {display: none;}
+		}
+
+
+	</style>
+
+	<body>
+
+		<p>Wersja 1.00</p>
+
+		<p class="mode_monitor">Screen mode: monitor</p>
+		<p class="mode_smartphone">Screen mode: smartphone</p>
+
+		<table>
+		<tr>
+			<th>Nazwa miasta</th>
+			<th></th> 
+			<th style="width:400px">opis</th> 
+			
+		</tr>
+		<tr>
+			<td><a href="madryt.html">Madryt</td>
+			<td><img src="./images/madryt_logo_sm.png"></td>   
+			<td>Stolica Hiszpanii</td> 
+		
+		</tr>
+		<tr>
+			<td><a href="barcelona.html">Barcelona</td>
+			<td><img src="./images/barcelona_logo_sm.png"></td>
+			<td>Stolica Katalonii</td> 
+			
+		</tr>
+		</table>
+	</body>
+
+</html>
